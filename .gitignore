@@ -1,6 +1,5 @@
 gradlew.bat
 build
-gradle
 .idea
 .gradle
 lombok.config
