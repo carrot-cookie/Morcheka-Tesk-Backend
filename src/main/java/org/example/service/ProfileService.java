@@ -45,6 +45,7 @@ public class ProfileService {
         String passwordHash = passwordEncoder.encode(createModel.getRawPassword());
         Profile profile = new Profile(createModel.getLogin(), passwordHash, createModel.getName(), createModel.getLastName(),
                 createModel.getDateOfBirth());
+        if (createModel.getEmail() != null) profile.setEmail(createModel.getEmail());
         profileRepository.save(profile);
     }
 
