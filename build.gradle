@@ -32,6 +32,10 @@ dependencies {
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+bootJar {
+    exclude('application-default.properties')
+}
+
 test {
     useJUnitPlatform()
 }
